@@ -1,16 +1,21 @@
 package com.hunsley.feature.repo;
 
 import com.hunsley.feature.client.MyFeignClient;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Optional;
 import org.springframework.stereotype.Repository;
 
-@Repository("switchableFeignRepository")
+@Repository
 public class SwitchableFeignRepository {
 
-  @Autowired
-  private MyFeignClient myFeignClient;
+  private final Optional<MyFeignClient> myFeignClient;
+
+  public SwitchableFeignRepository(Optional<MyFeignClient> myFeignClient) {
+    this.myFeignClient = myFeignClient;
+  }
 
   public String getMyResponse(final String param) {
-    return myFeignClient.getMyResponse(param).getBody();
+
+    if(!myFeignClient.isPresent()) return "no feign client, skipping ....";
+    return myFeignClient.get().getMyResponse(param).getBody();
   }
 }

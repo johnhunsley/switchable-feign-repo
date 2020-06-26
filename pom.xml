@@ -99,7 +99,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <jvmArguments>
-                        -Dspring.profiles.active=myFeignClient-off -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
+                        -Dspring.profiles.active=dev -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005
                     </jvmArguments>
                 </configuration>
             </plugin>
