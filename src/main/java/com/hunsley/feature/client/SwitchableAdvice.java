@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class SwitchableAdvice {
 
   @Around("@annotation(Switchable)")
-  public Object bypass(ProceedingJoinPoint joinPoint) throws Throwable {
+  public Object bypassIfSwitchedOff(ProceedingJoinPoint joinPoint) throws Throwable {
     MethodSignature signature = (MethodSignature) joinPoint.getSignature();
     Method method = joinPoint.getTarget().getClass().getMethod(signature.getMethod().getName(),
             signature.getMethod().getParameterTypes());
