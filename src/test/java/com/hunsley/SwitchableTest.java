@@ -19,7 +19,7 @@ public class SwitchableTest {
 
   @Test
   public void testSwitchable() {
-    switchableFeignRepository.getMyResponse("test");
+    System.out.println(switchableFeignRepository.getMyResponse("test"));
   }
 
 }

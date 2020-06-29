@@ -21,7 +21,7 @@ public class SwitchableAdvice {
    * @throws Throwable
    */
   @Around("@annotation(Switchable)")
-  public void bypassIfSwitchedOff(ProceedingJoinPoint joinPoint) throws Throwable {
+  public Object bypassIfSwitchedOff(ProceedingJoinPoint joinPoint) throws Throwable {
     MethodSignature signature = (MethodSignature) joinPoint.getSignature();
     Method method = joinPoint.getTarget().getClass().getMethod(signature.getMethod().getName(), signature.getMethod().getParameterTypes());
     Switchable switchable = method.getAnnotation(Switchable.class);
@@ -40,10 +40,11 @@ public class SwitchableAdvice {
 
       if (optional.isEmpty()) {
         System.out.println("switched OFF");
+        return null;
 
       } else {
         System.out.println("switched ON");
-        joinPoint.proceed();
+        return joinPoint.proceed();
       }
 
     } else {
