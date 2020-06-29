@@ -1,4 +1,4 @@
-package com.hunsley.feature.client;
+package com.hunsley.feature;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

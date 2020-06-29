@@ -1,7 +1,7 @@
 package com.hunsley.feature.repo;
 
 import com.hunsley.feature.client.MyFeignClient;
-import com.hunsley.feature.client.Switchable;
+import com.hunsley.feature.Switchable;
 import java.util.Optional;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
