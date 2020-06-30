@@ -1,6 +1,6 @@
-package com.hunsley.feature.repo;
+package com.hunsley.featureswitch.example.repo;
 
-import com.hunsley.feature.AbstractSwitchableAdvice;
+import com.hunsley.featureswitch.AbstractSwitchableAdvice;
 import org.aspectj.lang.JoinPoint;
 import org.springframework.stereotype.Component;
 

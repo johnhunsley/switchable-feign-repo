@@ -1,4 +1,4 @@
-package com.hunsley.feature.client;
+package com.hunsley.featureswitch.example.client;
 
 import feign.auth.BasicAuthRequestInterceptor;
 import org.springframework.beans.factory.annotation.Value;

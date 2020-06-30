@@ -1,4 +1,4 @@
-package com.hunsley.feature.client;
+package com.hunsley.featureswitch.example.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Profile;

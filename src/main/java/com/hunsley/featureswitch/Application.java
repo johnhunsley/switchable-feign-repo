@@ -1,6 +1,6 @@
-package com.hunsley.feature;
+package com.hunsley.featureswitch;
 
-import com.hunsley.feature.repo.SwitchableFeignRepository;
+import com.hunsley.featureswitch.example.repo.SwitchableFeignRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;

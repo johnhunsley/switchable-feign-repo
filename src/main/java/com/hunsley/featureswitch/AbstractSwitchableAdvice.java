@@ -1,4 +1,4 @@
-package com.hunsley.feature;
+package com.hunsley.featureswitch;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -27,7 +27,7 @@ public abstract class AbstractSwitchableAdvice {
    *         when the switch is off
    * @throws Throwable
    */
-  @Around("@annotation(com.hunsley.feature.Switchable)")
+  @Around("@annotation(com.hunsley.featureswitch.Switchable)")
   public final Object doSwitch(ProceedingJoinPoint joinPoint) throws Throwable {
 
     final String switchableInstanceName = getSwitchableBeanInstanceName(joinPoint);
